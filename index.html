@@ -14,18 +14,44 @@
     </header>
     <main>
         <form>
-            <!-- <label for="side-a">Side A</label>
-            <input id="side-a" type="number" name="triangle">
-            <br />
-            <label for="side-b">Side B</label>
-            <input id="side-b" type="number" name="triangle">
-            <br />
-            <label for="side-c">Side C</label>
-            <input id="side-c" type="number" name="triangle">
-            <br /> -->
-            <input type="submit">
+            <input type='text' id='comment' name='comment' value='Please enter your name'>
+
+            <fieldset id='bdfl-question'>
+                <legend>How do you feel about having a BDFL?</legend>
+
+                <label for='good'>Good</label>
+                <input type='radio' id='good' name='bdfl' value='good' checked>
+
+                <label for='bad'>Bad</label>
+                <input type='radio' id='bad' name='bdfl' value='bad'>
+            </fieldset>
+
+            <fieldset id='typing-question'>
+                <legend>Do you prefer a strongly typed language?</legend>
+
+                <label for='yes'>Yes</label>
+                <input type='radio' id='yes' name='typing' value='yes' checked>
+
+                <label for='no'>No</label>
+                <input type='radio' id='no' name='typing' value='no'>
+
+                <label for='chaos'>GIVE ME THE CHAOS</label>
+                <input type='radio' id='chaos' name='typing' value='chaos'>
+            </fieldset>
+
+            <fieldset id='color-question'>
+                <legend>Please select a favorite color combination</legend>
+
+                <label for='colors'>Colors:</label>
+                <select name='colors' id='colors'>
+                    <option value='Python'>Blue & Yellow</option>
+                    <option value='Ruby'>Red & White</option>
+                    <option value='JavaScript'>Yellow & Black</option>
+                </select>
+            </fieldset>
+            <input type='submit'>
         </form>
-        <div id="output">
+        <div id='output'>
             <h2><!-- Output! --></h2>
         </div>
     </main>
