@@ -15,14 +15,29 @@
     </header>
     <main>
         <form class='programming-questions'>
-            <input type='text' id='username' name='username' value='Please enter your name'>
+            <label for='username'>
+                What's your name?
+                <input type='text' id='username' name='username' required>
+            </label>
+
+            <fieldset name='epicodus'>
+                <legend>Will you be attending Epicodus?</legend>
+                <label for='yes'>
+                    <input type='radio' id='epi-yes' name='epicodus' value='yes' checked>
+                    Yes
+                </label>
+                <label for='no'>
+                    <input type='radio' id='epi-no' name='epicodus' value='no' checked>
+                    No
+                </label>
+            </fieldset>
 
             <fieldset name='bdfl'>
                 <legend>How do you feel about having a BDFL?</legend>
 
                 <label for='good'>
                     <input type='radio' id='good' name='bdfl' value='Python' checked>
-                    Yes
+                    Good
                 </label>
 
                 <label for='bad'>

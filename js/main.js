@@ -24,6 +24,7 @@ $(document).ready(function() {
 		e.preventDefault();
         let username = getVal('input#username');
 
+        let epicodus = getVal('input:radio[name="epicodus"]:checked');
         let bdfl = getVal('input:radio[name="bdfl"]:checked');
         let typing = getVal('input:radio[name="typing"]:checked');
         let color = getVal('select#colors option:selected');
@@ -36,7 +37,14 @@ $(document).ready(function() {
         let py = 0;
         let ru = 0;
         let js = 0;
-        myLog(py, ru, js);
+
+        // We strongly prefer Ruby & JavaScript for Epicodus students
+        if (epicodus === 'yes') {
+            js += 1;
+            ru += 1;
+        } else {
+            py += 1;
+        }
 
         [bdfl, typing, color, indentation, meal].forEach(function(item) {
             if (item === 'Python') {
