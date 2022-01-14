@@ -96,6 +96,10 @@ input {
     /* display: block; */
 }
 
+label {
+    /* display: block; */
+}
+
 footer {
     border-top: 2px solid var(--fg-color);
 }
