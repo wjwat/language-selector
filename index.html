@@ -17,7 +17,7 @@
         <form class='programming-questions'>
             <input type='text' id='comment' name='comment' value='Please enter your name'>
 
-            <fieldset name='bdfl-question'>
+            <fieldset name='bdfl'>
                 <legend>How do you feel about having a BDFL?</legend>
 
                 <label for='good'>
@@ -26,7 +26,7 @@
                 </label>
 
                 <label for='bad'>
-                    <input type='radio' id='bad' name='bdfl' value='Javascript'>
+                    <input type='radio' id='bad' name='bdfl' value='JavaScript'>
                     Give me a committee
                 </label>
 
@@ -36,26 +36,26 @@
                 </label>
             </fieldset>
 
-            <fieldset name='typing-question'>
+            <fieldset name='typing'>
                 <legend>Do you prefer a strongly typed language?</legend>
 
                 <label for='yes'>
-                    <input type='radio' id='yes' name='typing' value='yes' checked>
+                    <input type='radio' id='yes' name='typing' value='Ruby' checked>
                     Yes
                 </label>
 
-                <label for='no'>
-                    <input type='radio' id='no' name='typing' value='no'>
-                    No
+                <label for='maybe'>
+                    <input type='radio' id='maybe' name='typing' value='Python'>
+                    Maybe
                 </label>
 
                 <label for='chaos'>
-                    <input type='radio' id='chaos' name='typing' value='chaos'>
+                    <input type='radio' id='chaos' name='typing' value='JavaScript'>
                     GIVE ME THE CHAOS
                 </label>
             </fieldset>
 
-            <fieldset name='color-question'>
+            <fieldset name='color'>
                 <legend>Please select a favorite color combination</legend>
 
                 <select name='colors' id='colors'>
@@ -65,7 +65,7 @@
                 </select>
             </fieldset>
 
-            <fieldset name='indentation-question'>
+            <fieldset name='indentation'>
                 <legend>Should indentation be significant?</legend>
 
                 <select name='indentation' id='indentation'>
@@ -74,6 +74,17 @@
                     <option value='JavaScript'>GIVE ME THE CHAOS</option>
                 </select>
             </fieldset>
+
+            <fieldset name='meal'>
+                <legend>Pick a meal that most appeals to you</legend>
+
+                <select name='meal' id='meal'>
+                    <option value='Python'>Pizza</option>
+                    <option value='Ruby'>Hamburgers</option>
+                    <option value='JavaScript'>Spaghetti</option>
+                </select>
+            </fieldset>
+
             <input type='submit'>
         </form>
         <div id='output'>
