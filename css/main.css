@@ -69,26 +69,14 @@ a:hover {
     font-weight: bold;
 }
 
-ul li::marker {
-    color: var(--big-pop);
-}
-
-/*
-  hacky & stupid but i'm not sure how to align
-  the start of my ol, with the markers of my ul
- */
-ol {
-    padding-inline-start: 3.3em;
-}
-
-ol li::marker {
-    font-weight: bold;
-    color: var(--big-pop);
-}
-
 fieldset {
-    border: 2px solid var(--fg-color);
+    border: 1px solid var(--fg-color);
     margin-bottom: 1rem;
+    padding: 0 0 5px 10px;
+}
+
+fieldset legend {
+    font-size: 1.2rem;
 }
 
 .programming-questions label {
@@ -107,13 +95,42 @@ footer span.bigflex {
     font-family: 'Roboto Mono', monospace;
 }
 
+/* footer span.bigflex:hover:before {
+    content: "(HOCUS POCUS!)> ";
+    background-image: repeating-linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);   -webkit-background-clip: text;
+    color: transparent;
+} */
+
+.rainbow {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 32px;
+    font-family: monospace;
+    letter-spacing: 5px;
+}
+
 footer span.bigflex:hover:before {
-    content: "(FLEX TIME!)> ";
-    color: var(--fg-color);
+    content: "(HOCUS POCUS!)> ";
+    background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow_animation 6s ease-in-out infinite;
+    background-size: 400% 100%;
+}
+
+@keyframes rainbow_animation {
+    0%,100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 0;
+    }
 }
 
 footer span.bigflex:hover {
-    color: var(--big-pop);
+    color: var(--pop-color);
     font-weight: bold;
 }
 
