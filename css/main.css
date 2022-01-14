@@ -51,6 +51,11 @@ main {
     padding-bottom: 2rem;
 }
 
+abbr, abbr[title] {
+    font-weight: bold;
+    text-decoration: underline wavy var(--fg-pop);
+}
+
 form {
     overflow: hidden;
 
@@ -66,7 +71,6 @@ form {
 }
 
 fieldset {
-    /* border-top: 1px solid var(--quiz-pop); */
     padding: 1rem 0;
 }
 
@@ -106,6 +110,8 @@ select {
     margin-left: 1rem;
 }
 
+/* OUTPUT */
+
 #output {
     display: none;
     overflow: hidden;
@@ -128,9 +134,23 @@ select {
     font-size: 1.5rem;
 }
 
+span#Python {
+    color: #4b8bbe;
+}
+span#Ruby {
+    color: #eda895;
+}
+span#JavaScript {
+    color: #f0db4f;
+}
+
+/* FOOTER */
+
 footer {
     border-top: 2px solid var(--fg-color);
 }
+
+/* LITTLE GUYS */
 
 footer p {
     text-align: right;
@@ -165,12 +185,8 @@ footer span.bigflex:hover {
     font-weight: bold;
 }
 
-span#Python {
-    color: #4b8bbe;
-}
-span#Ruby {
-    color: #eda895;
-}
-span#JavaScript {
-    color: #f0db4f;
+/* FANCY NAMES */
+
+span#fancy-name {
+    color: red;
 }

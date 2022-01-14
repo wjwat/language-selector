@@ -64,6 +64,7 @@ $(document).ready(function() {
         });
 
         let prefLanguage = determinePreferredLanguage(py, ru, js);
+        let username = fancyUserName(username);
 
         displayLanguagePref(username, prefLanguage);
         
