@@ -27,12 +27,12 @@ $(document).ready(function() {
         `
 
         $('div#output').html(output);
+        $('div#output').show();
     }
 
 	$('form').submit(function(e) {
 		e.preventDefault();
         let username = getVal('input#username');
-
         let epicodus = getVal('input:radio[name="epicodus"]:checked');
         let bdfl = getVal('input:radio[name="bdfl"]:checked');
         let typing = getVal('input:radio[name="typing"]:checked');

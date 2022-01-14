@@ -107,8 +107,25 @@ select {
 }
 
 #output {
+    display: none;
+    overflow: hidden;
+
+    width: 70%;
+
+    margin: auto;
+    padding: 1rem;
+
+    color: var(--fg-quiz);
+    border: 1px solid var(--bg-quiz);
+    border-radius: 5px;
+    background-color: var(--bg-quiz);
+
     text-align: center;
     margin-top: 1rem;
+}
+
+#output h3 {
+    font-size: 1.5rem;
 }
 
 footer {
@@ -149,11 +166,11 @@ footer span.bigflex:hover {
 }
 
 span#Python {
-    color: #ffe873;
+    color: #4b8bbe;
 }
 span#Ruby {
-    color: #820c02;
+    color: #eda895;
 }
 span#JavaScript {
-    color: #323330;
+    color: #f0db4f;
 }
