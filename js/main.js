@@ -21,7 +21,7 @@ function determinePreferredLanguage(py, ru, js) {
 
 $(document).ready(function() {
     function displayLanguagePref(user, lang) {
-        output = `<h3>Thank you, ${user}!<br>
+        let output = `<h3>Thank you, ${user}!<br>
         Your preferred language is:</h3>
         <h2><span id='${lang}'>${lang}</span></h2>
         `

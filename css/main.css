@@ -125,11 +125,11 @@ footer span.bigflex {
 
 footer span.bigflex:hover:before {
     content: "(HOCUS POCUS!)> ";
-    background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+    background: linear-gradient(to right, #00ff00, black, #00ff00);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    animation: rainbow_animation 2s ease-in-out infinite;
+    animation: rainbow_animation 3s ease-in-out infinite;
     background-size: 400% 100%;
 }
 
@@ -149,11 +149,11 @@ footer span.bigflex:hover {
 }
 
 span#Python {
-    color: red;
+    color: #ffe873;
 }
 span#Ruby {
-    color: blue;
+    color: #820c02;
 }
-span#JavasScript {
-    color: yellow;
+span#JavaScript {
+    color: #323330;
 }
