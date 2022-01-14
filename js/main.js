@@ -30,6 +30,18 @@ $(document).ready(function() {
         $('div#output').show();
     }
 
+    function fancyUserName(name) {
+        if (name.toUpperCase() === 'ERIK'
+         || name.toUpperCase() === 'RYAN'
+         || name.toUpperCase() === 'LOUIE'
+         || name.toUpperCase() === 'WILL'
+         || name.toUpperCase() === 'LEXIE') {
+            return `<span id="fancy-name">${name}</span>`;
+        } else {
+            return name;
+        }
+    }
+
 	$('form').submit(function(e) {
 		e.preventDefault();
         let username = getVal('input#username');
@@ -64,7 +76,7 @@ $(document).ready(function() {
         });
 
         let prefLanguage = determinePreferredLanguage(py, ru, js);
-        let username = fancyUserName(username);
+        username = fancyUserName(username);
 
         displayLanguagePref(username, prefLanguage);
         

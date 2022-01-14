@@ -188,5 +188,10 @@ footer span.bigflex:hover {
 /* FANCY NAMES */
 
 span#fancy-name {
-    color: red;
+    background: linear-gradient(to right, #bf616a, #d08770, #ebcb8b, #a3be8c, #b48ead, #bf616a);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow_animation 4s ease-in-out infinite;
+    background-size: 400% 100%;
 }
