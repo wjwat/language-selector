@@ -1,0 +1,122 @@
+:root {
+    --bg-color: #4c566a;
+    --fg-color: #e5e9f0;
+    --fg-pop: #88c0d0;
+    --pop-color: #d08770;
+    --big-pop: #bf616a;
+    --font: 'Roboto Mono', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-size: 16px;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg-color: #e5e9f0;
+        --fg-color: #4c566a;
+        --fg-pop: #bf616a;
+        --big-pop: #8fbcbb;
+    }
+}
+
+body {
+    font-family: var(--font);
+    font-size: var(--font-size);
+    color: var(--fg-color);
+    background-color: var(--bg-color);
+    margin-bottom: 4rem;
+    padding: .5rem;
+}
+
+header, main, footer {
+    margin: 0 auto;
+    max-width: 50rem;
+    width: 100%;
+}
+
+header {
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--fg-color);
+}
+
+header img {
+    display: block;
+    margin: auto;
+
+    max-width: 25%;
+
+    border-radius: 50%;
+    background-color: var(--fg-color);
+    padding: 5px;
+}
+
+header img:hover {
+    background-color: var(--big-pop);
+}
+
+header h1 {
+    text-align: center;
+}
+
+main {
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+a {
+    color: var(--pop-color);
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+ul li::marker {
+    color: var(--big-pop);
+}
+
+/*
+  hacky & stupid but i'm not sure how to align
+  the start of my ol, with the markers of my ul
+ */
+ol {
+    padding-inline-start: 3.3em;
+}
+
+ol li::marker {
+    font-weight: bold;
+    color: var(--big-pop);
+}
+
+footer {
+    border-top: 2px solid var(--fg-color);
+}
+
+footer p {
+    text-align: right;
+}
+
+footer span.bigflex {
+    font-family: 'Roboto Mono', monospace;
+}
+
+footer span.bigflex:hover:before {
+    content: "(FLEX TIME!)> ";
+    color: var(--fg-color);
+}
+
+footer span.bigflex:hover {
+    color: var(--big-pop);
+    font-weight: bold;
+}
+
+.RIP {
+    color: var(--fg-pop);
+    position: relative;
+    top: -0.5em;
+    font-size: 60%;
+}
+
+#floating-sando {
+    max-width: 100px;
+    float: left;
+    margin-right: 1rem;
+}
