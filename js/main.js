@@ -65,6 +65,10 @@ $(document).ready(function() {
             py += 1;
         }
 
+        // We are making the same decision for each of these variables so it's
+        // easier to just iterate over them and accumulate the answers. The
+        // other option would be some hairy looking if/if else/else nest.
+        // Easiest would be using an object and map :)
         [bdfl, typing, color, indentation, meal].forEach(function(item) {
             if (item === 'Python') {
                 py += 1;
