@@ -91,13 +91,8 @@ fieldset {
     margin-bottom: 1rem;
 }
 
-input {
-    margin-bottom: 1rem;
-    /* display: block; */
-}
-
-label {
-    /* display: block; */
+.programming-questions label {
+    display: block;
 }
 
 footer {

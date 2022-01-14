@@ -11,41 +11,53 @@
 </head>
 <body>
     <header>
+        <h1>Programming Language Quiz</h1>
     </header>
     <main>
-        <form>
+        <form class='programming-questions'>
             <input type='text' id='comment' name='comment' value='Please enter your name'>
 
             <fieldset name='bdfl-question'>
                 <legend>How do you feel about having a BDFL?</legend>
 
-                <input type='radio' id='good' name='bdfl' value='Python' checked>
-                <label for='good'>Yes</label>
+                <label for='good'>
+                    <input type='radio' id='good' name='bdfl' value='Python' checked>
+                    Yes
+                </label>
 
-                <input type='radio' id='bad' name='bdfl' value='Javascript'>
-                <label for='bad'>Give me a committee</label>
+                <label for='bad'>
+                    <input type='radio' id='bad' name='bdfl' value='Javascript'>
+                    Give me a committee
+                </label>
 
-                <input type='radio' id='minswan' name='bdfl' value='Ruby'>
-                <label for='minswan'>MINSWAN</label>
+                <label for='minswan'>
+                    <input type='radio' id='minswan' name='bdfl' value='Ruby'>
+                    MINSWAN
+                </label>
             </fieldset>
 
             <fieldset name='typing-question'>
                 <legend>Do you prefer a strongly typed language?</legend>
 
-                <label for='yes'>Yes</label>
-                <input type='radio' id='yes' name='typing' value='yes' checked>
+                <label for='yes'>
+                    <input type='radio' id='yes' name='typing' value='yes' checked>
+                    Yes
+                </label>
 
-                <label for='no'>No</label>
-                <input type='radio' id='no' name='typing' value='no'>
+                <label for='no'>
+                    <input type='radio' id='no' name='typing' value='no'>
+                    No
+                </label>
 
-                <label for='chaos'>GIVE ME THE CHAOS</label>
-                <input type='radio' id='chaos' name='typing' value='chaos'>
+                <label for='chaos'>
+                    <input type='radio' id='chaos' name='typing' value='chaos'>
+                    GIVE ME THE CHAOS
+                </label>
             </fieldset>
 
             <fieldset name='color-question'>
                 <legend>Please select a favorite color combination</legend>
 
-                <label for='colors'>Colors:</label>
                 <select name='colors' id='colors'>
                     <option value='Python'>Blue & Yellow</option>
                     <option value='Ruby'>Red & White</option>
@@ -56,7 +68,6 @@
             <fieldset name='indentation-question'>
                 <legend>Should indentation be significant?</legend>
 
-                <label for='indentation'>Colors:</label>
                 <select name='indentation' id='indentation'>
                     <option value='Python'>Yes please!</option>
                     <option value='Ruby'>For the most part</option>
