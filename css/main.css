@@ -1,207 +1,207 @@
 :root {
-    --bg-color: #4c566a;
-    --fg-color: #e5e9f0;
-    --fg-pop: #88c0d0;
-    --pop-color: #d08770;
-    --big-pop: #bf616a;
+  --bg-color: #4c566a;
+  --fg-color: #e5e9f0;
+  --fg-pop: #88c0d0;
+  --pop-color: #d08770;
+  --big-pop: #bf616a;
 
-    --bg-quiz: #2e3440;
-    --fg-quiz: #e5e9f0;
-    --quiz-pop: #88c0d0;
+  --bg-quiz: #2e3440;
+  --fg-quiz: #e5e9f0;
+  --quiz-pop: #88c0d0;
 
-    --font: 'Roboto Mono', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --font-size: 16px;
+  --font: 'Roboto Mono', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-size: 16px;
 }
 
 @media (prefers-color-scheme: light) {
-    :root {
-        --bg-color: #e5e9f0;
-        --fg-color: #4c566a;
-        --fg-pop: #bf616a;
-        --big-pop: #8fbcbb;
-    }
+  :root {
+    --bg-color: #e5e9f0;
+    --fg-color: #4c566a;
+    --fg-pop: #bf616a;
+    --big-pop: #8fbcbb;
+  }
 }
 
 body {
-    font-family: var(--font);
-    font-size: var(--font-size);
-    color: var(--fg-color);
-    background-color: var(--bg-color);
-    margin-bottom: 4rem;
-    padding: .5rem;
+  font-family: var(--font);
+  font-size: var(--font-size);
+  color: var(--fg-color);
+  background-color: var(--bg-color);
+  margin-bottom: 4rem;
+  padding: .5rem;
 }
 
 header, main, footer {
-    margin: 0 auto;
-    max-width: 50rem;
-    width: 100%;
+  margin: 0 auto;
+  max-width: 50rem;
+  width: 100%;
 }
 
 header {
-    padding-bottom: 1rem;
-    border-bottom: 2px solid var(--fg-color);
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--fg-color);
 }
 
 header h1 {
-    text-align: center;
+  text-align: center;
 }
 
 main {
-    margin-top: 2rem;
-    padding-bottom: 2rem;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 abbr, abbr[title] {
-    font-weight: bold;
-    text-decoration: underline wavy var(--fg-pop);
+  font-weight: bold;
+  text-decoration: underline wavy var(--fg-pop);
 }
 
 form {
-    overflow: hidden;
+  overflow: hidden;
 
-    width: 70%;
+  width: 70%;
 
-    margin: auto;
-    padding: 1rem;
+  margin: auto;
+  padding: 1rem;
 
-    color: var(--fg-quiz);
-    border: 1px solid var(--bg-quiz);
-    border-radius: 5px;
-    background-color: var(--bg-quiz);
+  color: var(--fg-quiz);
+  border: 1px solid var(--bg-quiz);
+  border-radius: 5px;
+  background-color: var(--bg-quiz);
 }
 
 fieldset {
-    padding: 1rem 0;
+  padding: 1rem 0;
 }
 
 fieldset legend {
-    font-size: 1.2rem;
-    margin-bottom: .2rem;
-    border-bottom: 1px solid var(--quiz-pop);
+  font-size: 1.2rem;
+  margin-bottom: .2rem;
+  border-bottom: 1px solid var(--quiz-pop);
 }
 
 input[type=text] {
-    display: block;
-    width: 60%;
-    margin-bottom: 1rem;
+  display: block;
+  width: 60%;
+  margin-bottom: 1rem;
 }
 
 input[type=submit] {
-    float: right;
-    margin-top: 3rem;
-    border-radius: 5px;
-    border-color: var(--big-pop);
-    background-color: var(--big-pop);
+  float: right;
+  margin-top: 3rem;
+  border-radius: 5px;
+  border-color: var(--big-pop);
+  background-color: var(--big-pop);
 }
 
 input[type=submit]:hover {
-    border-color: var(--pop-color);
-    background-color: var(--pop-color);
+  border-color: var(--pop-color);
+  background-color: var(--pop-color);
 }
 
 select {
-    width: 40%;
-    margin-top: .5rem;
-    margin-left: 1rem;
+  width: 40%;
+  margin-top: .5rem;
+  margin-left: 1rem;
 }
 
 .programming-questions label {
-    display: block;
-    margin-left: 1rem;
+  display: block;
+  margin-left: 1rem;
 }
 
 /* OUTPUT */
 
 #output {
-    display: none;
-    overflow: hidden;
+  display: none;
+  overflow: hidden;
 
-    width: 70%;
+  width: 70%;
 
-    margin: auto;
-    padding: 1rem;
+  margin: auto;
+  padding: 1rem;
 
-    color: var(--fg-quiz);
-    border: 1px solid var(--bg-quiz);
-    border-radius: 5px;
-    background-color: var(--bg-quiz);
+  color: var(--fg-quiz);
+  border: 1px solid var(--bg-quiz);
+  border-radius: 5px;
+  background-color: var(--bg-quiz);
 
-    text-align: center;
-    margin-top: 1rem;
+  text-align: center;
+  margin-top: 1rem;
 }
 
 #output h3 {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 span#Python {
-    color: #4b8bbe;
+  color: #4b8bbe;
 }
 span#Ruby {
-    color: #eda895;
+  color: #eda895;
 }
 span#JavaScript {
-    color: #f0db4f;
+  color: #f0db4f;
 }
 
 /* FOOTER */
 
 footer {
-    border-top: 2px solid var(--fg-color);
+  border-top: 2px solid var(--fg-color);
 }
 
 /* LITTLE GUYS */
 
 footer p {
-    text-align: right;
+  text-align: right;
 }
 
 footer span.bigflex {
-    font-family: 'Roboto Mono', monospace;
+  font-family: 'Roboto Mono', monospace;
 }
 
 span.bigflex:hover #wand, span.bigflex:hover:before, #fancy-name {
-    background: linear-gradient(to right, #00ff00, black, #00ff00, black, #00ff00);
-    background-clip: text;
-    color: transparent;
-    animation: rainbow_animation 3s ease-in-out infinite;
-    background-size: 400% 100%;
+  background: linear-gradient(to right, #00ff00, black, #00ff00, black, #00ff00);
+  background-clip: text;
+  color: transparent;
+  animation: rainbow_animation 3s ease-in-out infinite;
+  background-size: 400% 100%;
 }
 
 span.bigflex:hover:before {
-    content: "(HOCUS POCUS!)> ";
-    background: linear-gradient(to right, #00ff00, black, #00ff00);
-    background-clip: text;
-    background-size: 400% 100%;
+  content: "(HOCUS POCUS!)> ";
+  background: linear-gradient(to right, #00ff00, black, #00ff00);
+  background-clip: text;
+  background-size: 400% 100%;
 }
 
 #fancy-name {
-    background: linear-gradient(to right, #bf616a, #d08770, #ebcb8b, #a3be8c, #b48ead, #bf616a);
-    background-clip: text;
-    background-size: 400% 100%;
+  background: linear-gradient(to right, #bf616a, #d08770, #ebcb8b, #a3be8c, #b48ead, #bf616a);
+  background-clip: text;
+  background-size: 400% 100%;
 }
 
 
 @keyframes rainbow_animation {
-    0%,100% {
-        background-position: 0 0;
-    }
+  0%,100% {
+    background-position: 0 0;
+  }
 
-    50% {
-        background-position: 100% 0;
-    }
+  50% {
+    background-position: 100% 0;
+  }
 }
 
 span.bigflex:hover {
-    color: var(--pop-color);
-    font-weight: bold;
+  color: var(--pop-color);
+  font-weight: bold;
 }
 
 @media (max-width: 600px) { 
-    form, #output {
-        width: 95%;
-    }
-    select {
-        width: 60%;
-    }
+  form, #output {
+    width: 95%;
+  }
+  select {
+    width: 60%;
+  }
 }
