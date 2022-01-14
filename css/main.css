@@ -61,22 +61,42 @@ main {
     padding-bottom: 2rem;
 }
 
-a {
-    color: var(--pop-color);
-}
-
-a:hover {
-    font-weight: bold;
+form {
+    width: 70%;
+    margin: auto;
+    border: 1px solid black;
+    padding: 1rem;
+    overflow: hidden;
 }
 
 fieldset {
-    border: 1px solid var(--fg-color);
-    margin-bottom: 1rem;
-    padding: 0 0 5px 10px;
+    border-top: 1px solid var(--fg-color);
+    padding: 1rem 0;
 }
 
 fieldset legend {
     font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+input[type=text] {
+    display: block;
+    width: 60%;
+    margin-bottom: 1rem;
+}
+
+input[type=submit] {
+    float: right;
+    border-radius: 5px;
+    background-color: var(--big-pop);
+}
+
+input[type=submit]:hover {
+    background-color: var(--pop-color);
+}
+
+select {
+    width: 40%;
 }
 
 .programming-questions label {
