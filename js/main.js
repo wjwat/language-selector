@@ -31,8 +31,6 @@ $(document).ready(function() {
         let indentation = getVal('select#indentation option:selected');
         let meal = getVal('select#meal option:selected');
 
-        myLog(bdfl, typing, color, indentation, meal);
-
         // python, ruby, javascript
         let py = 0;
         let ru = 0;
@@ -59,5 +57,9 @@ $(document).ready(function() {
         let prefLanguage = determinePreferredLanguage(py, ru, js);
 
         $('div#output h2').html('<center>Thank you, '+ username +'. Your preferred language is: '+prefLanguage+'!</center>')
+        
+        // Reset form inputs after we've determined which language is best
+        // for user.
+        $(this).trigger('reset');
 	});
 });
