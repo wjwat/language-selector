@@ -42,21 +42,6 @@ header {
     border-bottom: 2px solid var(--fg-color);
 }
 
-header img {
-    display: block;
-    margin: auto;
-
-    max-width: 25%;
-
-    border-radius: 50%;
-    background-color: var(--fg-color);
-    padding: 5px;
-}
-
-header img:hover {
-    background-color: var(--big-pop);
-}
-
 header h1 {
     text-align: center;
 }
@@ -121,7 +106,8 @@ select {
     margin-left: 1rem;
 }
 
-#output h2 {
+#output {
+    text-align: center;
     margin-top: 1rem;
 }
 
@@ -162,15 +148,12 @@ footer span.bigflex:hover {
     font-weight: bold;
 }
 
-.RIP {
-    color: var(--fg-pop);
-    position: relative;
-    top: -0.5em;
-    font-size: 60%;
+span#Python {
+    color: red;
 }
-
-#floating-sando {
-    max-width: 100px;
-    float: left;
-    margin-right: 1rem;
+span#Ruby {
+    color: blue;
+}
+span#JavasScript {
+    color: yellow;
 }

@@ -20,6 +20,15 @@ function determinePreferredLanguage(py, ru, js) {
 }
 
 $(document).ready(function() {
+    function displayLanguagePref(user, lang) {
+        output = `<h3>Thank you, ${user}!<br>
+        Your preferred language is:</h3>
+        <h2><span id='${lang}'>${lang}</span></h2>
+        `
+
+        $('div#output').html(output);
+    }
+
 	$('form').submit(function(e) {
 		e.preventDefault();
         let username = getVal('input#username');
@@ -56,7 +65,7 @@ $(document).ready(function() {
 
         let prefLanguage = determinePreferredLanguage(py, ru, js);
 
-        $('div#output h2').html('<center>Thank you, '+ username +'. Your preferred language is: '+prefLanguage+'!</center>')
+        displayLanguagePref(username, prefLanguage);
         
         // Reset form inputs after we've determined which language is best
         // for user.
