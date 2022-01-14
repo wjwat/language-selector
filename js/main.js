@@ -62,4 +62,7 @@ $(document).ready(function() {
         // for user.
         $(this).trigger('reset');
 	});
+    // Reset on page refresh
+    // XXX not sure if this is desired functionality
+    $('form').trigger('reset');
 });
