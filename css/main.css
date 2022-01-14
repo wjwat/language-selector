@@ -4,6 +4,11 @@
     --fg-pop: #88c0d0;
     --pop-color: #d08770;
     --big-pop: #bf616a;
+
+    --bg-quiz: #2e3440;
+    --fg-quiz: #e5e9f0;
+    --quiz-pop: #88c0d0;
+
     --font: 'Roboto Mono', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --font-size: 16px;
 }
@@ -62,21 +67,28 @@ main {
 }
 
 form {
-    width: 70%;
-    margin: auto;
-    border: 1px solid black;
-    padding: 1rem;
     overflow: hidden;
+
+    width: 70%;
+
+    margin: auto;
+    padding: 1rem;
+
+    color: var(--fg-quiz);
+    border: 1px solid var(--bg-quiz);
+    border-radius: 5px;
+    background-color: var(--bg-quiz);
 }
 
 fieldset {
-    border-top: 1px solid var(--fg-color);
+    /* border-top: 1px solid var(--quiz-pop); */
     padding: 1rem 0;
 }
 
 fieldset legend {
     font-size: 1.2rem;
-    margin-bottom: 0;
+    margin-bottom: .2rem;
+    border-bottom: 1px solid var(--quiz-pop);
 }
 
 input[type=text] {
@@ -87,20 +99,26 @@ input[type=text] {
 
 input[type=submit] {
     float: right;
+    margin-top: 3rem;
     border-radius: 5px;
+    border-color: var(--big-pop);
     background-color: var(--big-pop);
 }
 
 input[type=submit]:hover {
+    border-color: var(--pop-color);
     background-color: var(--pop-color);
 }
 
 select {
     width: 40%;
+    margin-top: .5rem;
+    margin-left: 1rem;
 }
 
 .programming-questions label {
     display: block;
+    margin-left: 1rem;
 }
 
 #output h2 {
