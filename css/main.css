@@ -48,6 +48,19 @@ form {
   padding-bottom: 1em;
 }
 
+#basic-name {
+  text-transform: uppercase;
+}
+
+#fancy-name {
+  text-transform: uppercase;
+  font-weight: bold;
+  background: linear-gradient(to right, #bf616a, #d08770, #ebcb8b, #a3be8c, #4c566a, #b48ead, #bf616a);
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-size: 400% 100%;
+}
+
 /* LITTLE GUYS */
 .lilguy p {
   font-family: 'Roboto Mono', monospace;
@@ -73,20 +86,10 @@ form {
   background-size: 400% 100%;
 }
 
-#fancy-name {
-  text-transform: uppercase;
-  font-weight: bold;
-  background: linear-gradient(to right, #bf616a, #d08770, #ebcb8b, #a3be8c, #4c566a, #b48ead, #bf616a);
-  background-clip: text;
-  -webkit-background-clip: text;
-  background-size: 400% 100%;
-}
-
 .lilguy:hover {
   color: var(--fg-pop);
   font-weight: bold;
 }
-
 
 @keyframes rainbow_animation {
   0%,100% {
