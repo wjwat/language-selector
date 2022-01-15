@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --bg-color: #4c566a;
   --fg-color: #e5e9f0;
   --fg-pop: #88c0d0;
@@ -20,148 +20,44 @@
     --fg-pop: #bf616a;
     --big-pop: #8fbcbb;
   }
-}
+} */
 
-body {
-  font-family: var(--font);
-  font-size: var(--font-size);
-  color: var(--fg-color);
-  background-color: var(--bg-color);
-  margin-bottom: 4rem;
-  padding: .5rem;
-}
-
-header, main, footer {
-  margin: 0 auto;
-  max-width: 50rem;
-  width: 100%;
-}
-
-header {
-  padding-bottom: 1rem;
-  border-bottom: 2px solid var(--fg-color);
-}
-
-header h1 {
-  text-align: center;
-}
-
-main {
-  margin-top: 2rem;
-  padding-bottom: 2rem;
-}
-
-abbr, abbr[title] {
-  font-weight: bold;
-  text-decoration: underline wavy var(--fg-pop);
+:root {
+  --lang-py: #4b8bbe;
+  --lang-ru: #eda895;
+  --lang-js: #f0db4f;
 }
 
 form {
-  overflow: hidden;
-
-  width: 70%;
-
-  margin: auto;
-  padding: 1rem;
-
-  color: var(--fg-quiz);
-  border: 1px solid var(--bg-quiz);
-  border-radius: 5px;
-  background-color: var(--bg-quiz);
+  padding-bottom: 1.5rem;
 }
 
-fieldset {
-  padding: 1rem 0;
-}
-
-fieldset legend {
-  font-size: 1.2rem;
-  margin-bottom: .2rem;
-  border-bottom: 1px solid var(--quiz-pop);
-}
-
-input[type=text] {
-  display: block;
-  width: 60%;
-  margin-bottom: 1rem;
-}
-
-input[type=submit] {
-  float: right;
-  margin-top: 3rem;
-  border-radius: 5px;
-  border-color: var(--big-pop);
-  background-color: var(--big-pop);
-}
-
-input[type=submit]:hover {
-  border-color: var(--pop-color);
-  background-color: var(--pop-color);
-}
-
-select {
-  width: 40%;
-  margin-top: .5rem;
-  margin-left: 1rem;
-}
-
-.programming-questions label {
-  display: block;
-  margin-left: 1rem;
-}
-
-/* OUTPUT */
+#Python     { color: var(--lang-py); }
+#Ruby       { color: var(--lang-ru); }
+#JavaScript { color: var(--lang-js); }
 
 #output {
   display: none;
-  overflow: hidden;
 
-  width: 70%;
-
-  margin: auto;
-  padding: 1rem;
-
-  color: var(--fg-quiz);
-  border: 1px solid var(--bg-quiz);
-  border-radius: 5px;
+  border: 1px solid black;
+  border-radius: var(--border-radius);
   background-color: var(--bg-quiz);
 
   text-align: center;
   margin-top: 1rem;
-}
-
-#output h3 {
-  font-size: 1.5rem;
-}
-
-span#Python {
-  color: #4b8bbe;
-}
-span#Ruby {
-  color: #eda895;
-}
-span#JavaScript {
-  color: #f0db4f;
-}
-
-/* FOOTER */
-
-footer {
-  border-top: 2px solid var(--fg-color);
+  padding-bottom: 1em;
 }
 
 /* LITTLE GUYS */
-
-footer p {
-  text-align: right;
-}
-
-footer span.bigflex {
+.lilguy p {
   font-family: 'Roboto Mono', monospace;
+  text-align: right;
+  margin-left: auto;
+  margin-right: 0;
 }
 
-span.bigflex:hover #wand, span.bigflex:hover:before, #fancy-name {
-  background: linear-gradient(to right, #00ff00, black, #00ff00, black, #00ff00);
+.lilguy:hover span#wand, .lilguy:hover span#lilguy:before, #fancy-name {
+  background: linear-gradient(to right, #00ff00, red, #00ff00, red, #00ff00);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -169,9 +65,9 @@ span.bigflex:hover #wand, span.bigflex:hover:before, #fancy-name {
   background-size: 400% 100%;
 }
 
-span.bigflex:hover:before {
-  content: "(HOCUS POCUS!)> ";
-  background: linear-gradient(to right, #00ff00, black, #00ff00);
+.lilguy:hover span#lilguy:before {
+  content: "(HOCUS POCUS!)>";
+  background: linear-gradient(to right, #00ff00, red, #00ff00);
   background-clip: text;
   -webkit-background-clip: text;
   background-size: 400% 100%;
@@ -180,10 +76,15 @@ span.bigflex:hover:before {
 #fancy-name {
   text-transform: uppercase;
   font-weight: bold;
-  background: linear-gradient(to right, #bf616a, #d08770, #ebcb8b, #a3be8c, #b48ead, #bf616a);
+  background: linear-gradient(to right, #bf616a, #d08770, #ebcb8b, #a3be8c, #4c566a, #b48ead, #bf616a);
   background-clip: text;
   -webkit-background-clip: text;
   background-size: 400% 100%;
+}
+
+.lilguy:hover {
+  color: var(--fg-pop);
+  font-weight: bold;
 }
 
 
@@ -197,16 +98,11 @@ span.bigflex:hover:before {
   }
 }
 
-span.bigflex:hover {
-  color: var(--pop-color);
-  font-weight: bold;
-}
-
-@media (max-width: 600px) { 
+/* @media (max-width: 600px) { 
   form, #output {
     width: 95%;
   }
   select {
     width: 60%;
   }
-}
+} */

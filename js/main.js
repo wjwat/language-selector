@@ -19,13 +19,16 @@ function determinePreferredLanguage(py, ru, js) {
 
 $(document).ready(function() {
   function displayLanguagePref(user, lang) {
-    let output = `<h3>Thank you, ${user}!<br>
-    Your preferred language is:</h3>
-    <h2><span id='${lang}'>${lang}</span></h2>`
+    // this is definitely unsafe
+    $('#username-out').html(`${user}`);
+    $('#lang-out').html(`<span id='${lang}'>${lang}</span>`);
 
-    $('div#output').html(output);
-    $('div#output').show();
+    $('form, div#output').toggle();
   }
+
+  $('#hide-results').on('click', function () {
+    $('form, div#output').toggle();
+  });
 
   // This would be great to hide with a rot13
   function makeNameExtraFancy(name) {
@@ -36,27 +39,26 @@ $(document).ready(function() {
      || name.toUpperCase() === 'LEXIE') {
       return `<span id="fancy-name">${name}</span>`;
     } else {
-      return name;
+      return `<span id="basic-name">${name}</span>`;
     }
   }
 
   $('form').submit(function(e) {
-    // console.log($(this).serializeArray());
-    //console.log($('input:radio:checked').serializeArray());
-    //console.log($('select'));
-    console.log('------------------------------------------------------')
-    $('input:radio:checked, select').each(function() {
-      console.log(this.value, this.name);
-    });
-    console.log('------------------------------------------------------')
-    $('select').each(function() {
-      console.log(this.value)
-      //console.log($(this)[z]);
-    })
-    console.log('------------------------------------------------------')
-    console.log(getVal('select#colors option:checked'));
-    console.log(getVal('select#colors'));
     e.preventDefault();
+
+    let aprefLanguage = {
+      'Python': 0,
+      'Ruby': 0,
+      'JavaScript': 0
+    }
+
+    $('fieldset[name=langpref] input:radio:checked, fieldset[name=langpref] select').each(function() {
+      console.log(this.name, this.value);
+      aprefLanguage[this.value] += 1;
+    });
+
+    console.log(aprefLanguage);
+
     let username = getVal('input#username');
     let epicodus = getVal('input:radio[name="epicodus"]:checked');
     let bdfl = getVal('input:radio[name="bdfl"]:checked');
