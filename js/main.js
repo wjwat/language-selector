@@ -1,5 +1,3 @@
-let myLog = console.log;
-
 function getVal(sel) {
   return $(sel).val();
 }
@@ -29,6 +27,7 @@ $(document).ready(function() {
     $('div#output').show();
   }
 
+  // This would be great to hide with a rot13
   function fancyUserName(name) {
     if (name.toUpperCase() === 'ERIK'
      || name.toUpperCase() === 'RYAN'
