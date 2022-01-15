@@ -28,7 +28,7 @@ $(document).ready(function() {
   }
 
   // This would be great to hide with a rot13
-  function fancyUserName(name) {
+  function makeNameExtraFancy(name) {
     if (name.toUpperCase() === 'ERIK'
      || name.toUpperCase() === 'RYAN'
      || name.toUpperCase() === 'LOUIE'
@@ -78,7 +78,7 @@ $(document).ready(function() {
     });
 
     let prefLanguage = determinePreferredLanguage(py, ru, js);
-    username = fancyUserName(username);
+    username = makeNameExtraFancy(username);
 
     displayLanguagePref(username, prefLanguage);
     
