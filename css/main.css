@@ -178,6 +178,8 @@ span.bigflex:hover:before {
 }
 
 #fancy-name {
+  text-transform: uppercase;
+  font-weight: bold;
   background: linear-gradient(to right, #bf616a, #d08770, #ebcb8b, #a3be8c, #b48ead, #bf616a);
   background-clip: text;
   -webkit-background-clip: text;
