@@ -41,6 +41,21 @@ $(document).ready(function() {
   }
 
   $('form').submit(function(e) {
+    // console.log($(this).serializeArray());
+    //console.log($('input:radio:checked').serializeArray());
+    //console.log($('select'));
+    console.log('------------------------------------------------------')
+    $('input:radio:checked, select').each(function() {
+      console.log(this.value, this.name);
+    });
+    console.log('------------------------------------------------------')
+    $('select').each(function() {
+      console.log(this.value)
+      //console.log($(this)[z]);
+    })
+    console.log('------------------------------------------------------')
+    console.log(getVal('select#colors option:checked'));
+    console.log(getVal('select#colors'));
     e.preventDefault();
     let username = getVal('input#username');
     let epicodus = getVal('input:radio[name="epicodus"]:checked');
