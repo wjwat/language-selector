@@ -17,28 +17,37 @@ function determinePreferredLanguage(py, ru, js) {
   }
 }
 
+// This would be great to hide with a rot13
+function determineNameType(name) {
+  if (name.toUpperCase() === 'ERIK'
+    || name.toUpperCase() === 'RYAN'
+    || name.toUpperCase() === 'LOUIE'
+    || name.toUpperCase() === 'WILL'
+    || name.toUpperCase() === 'LEXIE') {
+    return 'fancy-name';
+  } else {
+    return 'basic-name';
+  }
+}
+
+function displayLanguagePref(user, nameType, lang) {
+  $('#username-out').text(function() {
+    $(this).attr('class', nameType);
+    return user;
+  });
+
+  $('#lang-out').text(function() {
+    $(this).attr('class', lang);
+    return lang;
+  });
+
+  $('form, div#output').toggle();
+}
+
 $(document).ready(function() {
-  function displayLanguagePref(user, lang) {
-    let output = `<h3>Thank you, ${user}!<br>
-    Your preferred language is:</h3>
-    <h2><span id='${lang}'>${lang}</span></h2>`
-
-    $('div#output').html(output);
-    $('div#output').show();
-  }
-
-  // This would be great to hide with a rot13
-  function makeNameExtraFancy(name) {
-    if (name.toUpperCase() === 'ERIK'
-     || name.toUpperCase() === 'RYAN'
-     || name.toUpperCase() === 'LOUIE'
-     || name.toUpperCase() === 'WILL'
-     || name.toUpperCase() === 'LEXIE') {
-      return `<span id="fancy-name">${name}</span>`;
-    } else {
-      return name;
-    }
-  }
+  $('#hide-results').on('click', function() {
+    $('form, div#output').toggle();
+  });
 
   $('form').submit(function(e) {
     e.preventDefault();
@@ -78,15 +87,11 @@ $(document).ready(function() {
     });
 
     let prefLanguage = determinePreferredLanguage(py, ru, js);
-    username = makeNameExtraFancy(username);
 
-    displayLanguagePref(username, prefLanguage);
+    displayLanguagePref(username, determineNameType(username), prefLanguage);
     
     // Reset form inputs after we've determined which language is best
     // for user.
     $(this).trigger('reset');
   });
-  // Reset on page refresh
-  // XXX not sure if this is desired functionality
-  $('form').trigger('reset');
 });
