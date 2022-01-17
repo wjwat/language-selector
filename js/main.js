@@ -6,6 +6,7 @@ function determinePreferredLanguage(lang) {
   });
 }
 
+
 // Are we human or are we fancy?
 function getNameType(name) {
   specialNames = ['ERIK', 'RYAN', 'LOUIE', 'WILL', 'LEXIE']
@@ -17,12 +18,8 @@ function getNameType(name) {
 }
 
 
-function accumulate(myMap, value) {
-  if (myMap.has(value)) {
-    myMap.set(value, myMap.get(value) + 1);
-  } else {
-    myMap.set(value, 1);
-  }
+function increment(myMap, value) {
+  myMap.set(value, (myMap.has(value) ? myMap.get(value) + 1 : 1))
 }
 
 
@@ -51,22 +48,19 @@ $(document).ready(function() {
       ['Python', 1],
     ]);
 
-    $('fieldset[name=langpref] input:radio:checked, fieldset[name=langpref] select').each(function() {
-      accumulate(prefLanguage, this.value);
+    $('input:radio:checked, select').each(function() {
+      this.value.split(';').forEach(element => {
+        increment(prefLanguage, element)
+      })
     });
 
-    if ($('input:radio[name="epicodus"]:checked').val() === 'yes') {
-      accumulate(prefLanguage, 'Ruby');
-      accumulate(prefLanguage, 'JavaScript');
-    } else {
-      accumulate(prefLanguage, 'Python');
-    }
+    console.log(prefLanguage)
 
     const outName = $('input#username').val();
     const nameType = getNameType(outName);
 
     displayLanguagePref(outName, nameType, determinePreferredLanguage(prefLanguage));
-    
+
     $(this).trigger('reset');
     e.preventDefault();
   });
