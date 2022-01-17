@@ -1,167 +1,100 @@
-:root {
-  --bg-color: #4c566a;
-  --fg-color: #e5e9f0;
-  --fg-pop: #88c0d0;
-  --pop-color: #d08770;
-  --big-pop: #bf616a;
-
-  --bg-quiz: #2e3440;
-  --fg-quiz: #e5e9f0;
-  --quiz-pop: #88c0d0;
-
-  --font: 'Roboto Mono', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --font-size: 16px;
-}
-
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root {
-    --bg-color: #e5e9f0;
-    --fg-color: #4c566a;
-    --fg-pop: #bf616a;
-    --big-pop: #8fbcbb;
+      /* Colors */
+    --color-primary: #d8dee9;
+    --color-secondary: #e5e9f0;
+    --color-thirdly: #eceff4;
+    --color-primary-tint: #6472b1;
+    --color-accent: #ffa630;
+    --color-gray: #f8f8f8;
+    --color-med-gray: #828489;
+    --color-light-gray: #3f4045;
+    --color-bg: #4c566a;
+    --color-bg-med: #ececec;
+
+    /* Fonts */
+    --font-color-dark: #f8f8f8;
+    --font-color-light: #272727;
+    --font-color-med: #6e7075;
   }
 }
 
+:root {
+  --lang-py: #4b8bbe;
+  --lang-ru: #eda895;
+  --lang-js: #f0db4f;
+  --light-green: #a3be8c;
+
+  --font-family: 'Roboto Mono', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main, body > header div {
+  max-width: 40rem;
+}
+
+body > footer div {
+  max-width: 100%;
+}
+
 body {
-  font-family: var(--font);
-  font-size: var(--font-size);
-  color: var(--fg-color);
-  background-color: var(--bg-color);
-  margin-bottom: 4rem;
-  padding: .5rem;
+  font-family: var(--font-family);
 }
 
-header, main, footer {
-  margin: 0 auto;
-  max-width: 50rem;
-  width: 100%;
+abbr {
+  speak-as: spell-out;
+  text-decoration: underline wavy var(--color-accent);
 }
 
-header {
-  padding-bottom: 1rem;
-  border-bottom: 2px solid var(--fg-color);
-}
+form { padding-bottom: 1.5rem; }
+legend { margin-left: 0; }
+label { margin-left: .2em; }
 
-header h1 {
-  text-align: center;
-}
-
-main {
-  margin-top: 2rem;
-  padding-bottom: 2rem;
-}
-
-abbr, abbr[title] {
-  font-weight: bold;
-  text-decoration: underline wavy var(--fg-pop);
-}
-
-form {
-  overflow: hidden;
-
-  width: 70%;
-
-  margin: auto;
-  padding: 1rem;
-
-  color: var(--fg-quiz);
-  border: 1px solid var(--bg-quiz);
-  border-radius: 5px;
-  background-color: var(--bg-quiz);
-}
-
-fieldset {
-  padding: 1rem 0;
-}
-
-fieldset legend {
-  font-size: 1.2rem;
-  margin-bottom: .2rem;
-  border-bottom: 1px solid var(--quiz-pop);
-}
-
-input[type=text] {
-  display: block;
-  width: 60%;
-  margin-bottom: 1rem;
-}
-
-input[type=submit] {
-  float: right;
-  margin-top: 3rem;
-  border-radius: 5px;
-  border-color: var(--big-pop);
-  background-color: var(--big-pop);
-}
-
-input[type=submit]:hover {
-  border-color: var(--pop-color);
-  background-color: var(--pop-color);
-}
-
-select {
-  width: 40%;
-  margin-top: .5rem;
-  margin-left: 1rem;
-}
-
-.programming-questions label {
-  display: block;
-  margin-left: 1rem;
-}
-
-/* OUTPUT */
+.Python     { color: var(--lang-py); }
+.Ruby       { color: var(--lang-ru); }
+.JavaScript { color: var(--lang-js); }
 
 #output {
   display: none;
-  overflow: hidden;
 
-  width: 70%;
-
-  margin: auto;
-  padding: 1rem;
-
-  color: var(--fg-quiz);
-  border: 1px solid var(--bg-quiz);
-  border-radius: 5px;
+  border: 1px solid;
+  border-radius: var(--border-radius);
   background-color: var(--bg-quiz);
 
   text-align: center;
   margin-top: 1rem;
-}
-
-#output h3 {
-  font-size: 1.5rem;
-}
-
-span#Python {
-  color: #4b8bbe;
-}
-span#Ruby {
-  color: #eda895;
-}
-span#JavaScript {
-  color: #f0db4f;
-}
-
-/* FOOTER */
-
-footer {
-  border-top: 2px solid var(--fg-color);
+  padding-bottom: 1em;
 }
 
 /* LITTLE GUYS */
-
-footer p {
-  text-align: right;
-}
-
-footer span.bigflex {
+.lilguy p {
   font-family: 'Roboto Mono', monospace;
+  font-size: .9em;
+  text-align: right;
+  margin-left: auto;
+  margin-right: 0;
 }
 
-span.bigflex:hover #wand, span.bigflex:hover:before, #fancy-name {
-  background: linear-gradient(to right, #00ff00, black, #00ff00, black, #00ff00);
+#lilguy:hover:before {
+  content: "(HOCUS POCUS!)>";
+  background: linear-gradient(to right, #00ff00, red, #00ff00);
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-size: 400% 100%;
+}
+
+.lilguy p:hover {
+  color: var(--fg-pop);
+  font-weight: bold;
+}
+
+.fancy-name, .basic-name {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--light-green);
+}
+
+#lilguy:hover #wand, #lilguy:hover:before, .fancy-name {
+  background: linear-gradient(to right, #00ff00, red, #00ff00, red, #00ff00);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -169,23 +102,12 @@ span.bigflex:hover #wand, span.bigflex:hover:before, #fancy-name {
   background-size: 400% 100%;
 }
 
-span.bigflex:hover:before {
-  content: "(HOCUS POCUS!)> ";
-  background: linear-gradient(to right, #00ff00, black, #00ff00);
+.fancy-name {
+  background: linear-gradient(to right, #bf616a, #d08770, #ebcb8b, #a3be8c, #4c566a, #b48ead, #bf616a);
   background-clip: text;
   -webkit-background-clip: text;
   background-size: 400% 100%;
 }
-
-#fancy-name {
-  text-transform: uppercase;
-  font-weight: bold;
-  background: linear-gradient(to right, #bf616a, #d08770, #ebcb8b, #a3be8c, #b48ead, #bf616a);
-  background-clip: text;
-  -webkit-background-clip: text;
-  background-size: 400% 100%;
-}
-
 
 @keyframes rainbow_animation {
   0%,100% {
@@ -194,19 +116,5 @@ span.bigflex:hover:before {
 
   50% {
     background-position: 100% 0;
-  }
-}
-
-span.bigflex:hover {
-  color: var(--pop-color);
-  font-weight: bold;
-}
-
-@media (max-width: 600px) { 
-  form, #output {
-    width: 95%;
-  }
-  select {
-    width: 60%;
   }
 }
