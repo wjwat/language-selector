@@ -18,78 +18,97 @@
     <h4>Programming Language Quiz</h4>
     <form class='programming-questions'>
       <p>Please answer the questions to determine what programming language is best for you!</p>
-      <input type='text' id='username' name='username' val='' placeholder='Name' required>
+      
       <fieldset name='epicodus'>
-        <legend>Will you be attending Epicodus?</legend>
-        <label for='yes'>
-          <input type='radio' id='epi-yes' name='epicodus' value='yes'>
-          Yes
-        </label>
-        <label for='no'>
-          <input type='radio' id='epi-no' name='epicodus' value='no' checked>
-          No
-        </label>
+        <label for='username'>What is your name?</label>
+        <input type='text' id='username' name='username' val='' placeholder='Name' required>
+        <div>
+          <legend>Will you be attending Epicodus?</legend>
+          <label for='yes'>
+            <input type='radio' id='epi-yes' name='epicodus' value='yes'>
+            Yes
+          </label>
+          <label for='no'>
+            <input type='radio' id='epi-no' name='epicodus' value='no' checked>
+            No
+          </label>
+        </div>
       </fieldset>
-      <fieldset name='bdfl'>
-        <legend>How do you feel about having a <abbr title='Benevolent Dictator For Life'>BDFL</abbr>?</legend>
-        <label for='good'>
-          <input type='radio' id='good' name='bdfl' value='Python' checked>
-          Good
-        </label>
-        <label for='bad'>
-          <input type='radio' id='bad' name='bdfl' value='JavaScript'>
-          Give me a committee
-        </label>
-        <label for='minswan'>
-          <input type='radio' id='minswan' name='bdfl' value='Ruby'>
-          <abbr title='Matz Is Nice So We Are Nice'>
-            MINSWAN
-          </abbr>
-        </label>
+      <fieldset name='langpref'>
+        <div>
+          <legend>How do you feel about having a <abbr title='Benevolent Dictator For Life'>BDFL</abbr>?</legend>
+          <label for='good'>
+            <input type='radio' id='good' name='bdfl' value='Python' checked>
+            Good
+          </label>
+          <label for='bad'>
+            <input type='radio' id='bad' name='bdfl' value='JavaScript'>
+            Give me a committee
+          </label>
+          <label for='minswan'>
+            <input type='radio' id='minswan' name='bdfl' value='Ruby'>
+            <abbr title='Matz Is Nice So We Are Nice'>
+              MINSWAN
+            </abbr>
+          </label>
+        </div>
 
-        <legend>Do you prefer a strongly typed language?</legend>
-        <label for='yes'>
-          <input type='radio' id='yes' name='typing' value='Ruby' checked>
-          Yes
-        </label>
-        <label for='maybe'>
-          <input type='radio' id='maybe' name='typing' value='Python'>
-          Maybe
-        </label>
-        <label for='chaos'>
-          <input type='radio' id='chaos' name='typing' value='JavaScript'>
-          GIVE ME THE CHAOS
-        </label>
+        <div>
+          <legend>Do you prefer a strongly typed language?</legend>
+          <label for='yes'>
+            <input type='radio' id='yes' name='typing' value='Ruby' checked>
+            Yes
+          </label>
+          <label for='maybe'>
+            <input type='radio' id='maybe' name='typing' value='Python'>
+            Maybe
+          </label>
+          <label for='chaos'>
+            <input type='radio' id='chaos' name='typing' value='JavaScript'>
+            GIVE ME THE CHAOS
+          </label>
+        </div>
 
-        <legend>Please select a favorite color combination</legend>
-        <select name='colors' id='colors'>
-          <option value='Python'>Blue & Yellow</option>
-          <option value='Ruby'>Red & White</option>
-          <option value='JavaScript'>Yellow & Black</option>
-        </select>
+        <div>
+          <legend>Please select a favorite color combination</legend>
+          <select name='colors' id='colors'>
+            <option value='Python'>Blue & Yellow</option>
+            <option value='Ruby'>Red & White</option>
+            <option value='JavaScript'>Yellow & Black</option>
+          </select>
+        </div>
 
-        <legend>Should indentation be significant?</legend>
-        <select name='indentation' id='indentation'>
-          <option value='Python'>Yes please!</option>
-          <option value='Ruby'>For the most part</option>
-          <option value='JavaScript'>GIVE ME THE CHAOS</option>
-        </select>
+        <div>
+          <legend>Should indentation be significant?</legend>
+          <select name='indentation' id='indentation'>
+            <option value='Python'>Yes please!</option>
+            <option value='Ruby'>For the most part</option>
+            <option value='JavaScript'>GIVE ME THE CHAOS</option>
+          </select>
+        </div>
 
-        <legend>Pick a meal that most appeals to you</legend>
-        <select name='meal' id='meal'>
-          <option value='Python'>Pizza</option>
-          <option value='Ruby'>Hamburgers</option>
-          <option value='JavaScript'>Spaghetti</option>
-        </select>
+        <div>
+          <legend>Pick a meal that most appeals to you</legend>
+          <select name='meal' id='meal'>
+            <option value='Python'>Pizza</option>
+            <option value='Ruby'>Hamburgers</option>
+            <option value='JavaScript'>Spaghetti</option>
+          </select>
+        </div>
       </fieldset>
-  <input type='submit' value='SHOW ME'>
-  </form>
+
+      <button type='submit'>Submit</button>
+      <button type='reset'>Reset</button>
+    </form>
     <div id='output'>
-      <h2><!-- Output! --></h2>
+      <h3>Thank you, <span id='username-out'></span><br>Your preferred language is:</h3>
+      <h2 id='lang-out'></h2>
+      <input id='hide-results' type='button' value='Take the test again!'>
+      <!-- Output! -->
     </div>
   </main>
   <footer>
-    <p><span class="bigflex">╰( ⁰ ਊ ⁰ )━<span id='wand'>☆ﾟ.*･｡ﾟ</span></span></p>
+    <p><span class='lilguy'>╰( ⁰ ਊ ⁰ )━<span id='wand'>☆ﾟ.*･｡ﾟ</span></span></p>
   </footer>
 </body>
 </html>
