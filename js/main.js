@@ -22,6 +22,11 @@ function determineNameType(name) {
   if (name.toUpperCase() === 'ERIK'
     || name.toUpperCase() === 'RYAN'
     || name.toUpperCase() === 'LOUIE'
+    || name.toUpperCase() === 'BROOKE'
+    || name.toUpperCase() === 'CATHY'
+    || name.toUpperCase() === 'JAMES'
+    || name.toUpperCase() === 'PATRICK'
+    || name.toUpperCase() === 'VERONICA'
     || name.toUpperCase() === 'WILL'
     || name.toUpperCase() === 'LEXIE') {
     return 'fancy-name';
