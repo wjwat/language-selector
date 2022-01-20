@@ -4,7 +4,7 @@
 
 #### _Epicodus Independent Project Week 2_ -- A quiz designed to help the user decide which programming language to learn
 
-## Technologies Used
+## Technologies Used :computer:
 
 * HTML & CSS
 * Javascript
