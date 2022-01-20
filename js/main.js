@@ -42,7 +42,7 @@ function displayLanguagePref(user, nameType, lang) {
   });
 
   $('#lang-out').text(function() {
-    $(this).attr('class', lang);
+    $(this).attr('class', lang.toLowerCase());
     return lang;
   });
 

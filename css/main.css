@@ -49,9 +49,9 @@ form { padding-bottom: 1.5rem; }
 legend { margin-left: 0; }
 label { margin-left: .2em; }
 
-.Python     { color: var(--lang-py); }
-.Ruby       { color: var(--lang-ru); }
-.JavaScript { color: var(--lang-js); }
+.python     { color: var(--lang-py); }
+.ruby       { color: var(--lang-ru); }
+.javaScript { color: var(--lang-js); }
 
 #output {
   display: none;
