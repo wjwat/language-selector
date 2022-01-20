@@ -1,4 +1,4 @@
-# William's Language Picker
+# :fireworks: William's Language Picker :fireworks:	
 
 #### By [Will W.](https://wjwat.com/)
 
