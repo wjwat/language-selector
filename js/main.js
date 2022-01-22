@@ -81,6 +81,12 @@ $(document).ready(function() {
     // easier to just iterate over them and accumulate the answers. The
     // other option would be some hairy looking if/if else/else nest.
     // Easiest would be using an object and map :)
+    //
+    // Why strings and not integer values? Because it's much easier to understand
+    // what we're doing when it's just an accumulation of values keyed to strings,
+    // and easier to extend as we write questions to be accumulated if their value
+    // just has to match the text name of our options ('Python', 'Ruby', 'JavaScript').
+    // See the refactor branch for a streamlined version of this.
     [bdfl, typing, color, indentation, meal].forEach(function(item) {
       if (item === 'Python') {
         py += 1;
